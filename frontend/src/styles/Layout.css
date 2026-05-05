@@ -1,0 +1,32 @@
+/* styles/Layout.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout-main {
+  display: flex;
+  flex: 1;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 20px;
+ 
+  /* Important for horizontal scrolling */
+  display: flex;
+  justify-content: center; /* Center the leave container horizontally */
+  align-items: flex-start; /* Align from top */
+}
+
+@media (max-width: 768px) {
+  .layout-main {
+    flex-direction: column;
+  }
+
+  .layout-content {
+    padding: 10px;
+    justify-content: flex-start;
+  }
+}

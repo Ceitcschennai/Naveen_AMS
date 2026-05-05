@@ -1,0 +1,172 @@
+.emp-overall-container {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 120px;
+  margin-left: 250px;
+}
+
+.emp-title {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.emp-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.emp-button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.emp-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.emp-button-active {
+  background-color: #28a745;
+}
+
+.emp-card {
+  background-color: white;
+  padding: 30px 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: emp-slideUp 0.5s ease;
+  text-align: center;
+}
+
+.emp-card h2 {
+  color: #222;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.emp-card ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 40px;
+  margin: 10px 0 20px;
+}
+
+.emp-working-days,
+.emp-holidays {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: emp-fadeIn 0.6s ease;
+}
+
+.emp-working-days {
+  background-color: #e6f7ff;
+  border-left: 5px solid #007bff;
+}
+
+.emp-holidays {
+  background-color: #fff4e6;
+  border-left: 5px solid #ff9800;
+}
+
+.emp-working-days p,
+.emp-holidays p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+@keyframes emp-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes emp-fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .emp-overall-container {
+    margin-left: 0;
+    margin-top: 100px;
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .emp-card h2 {
+    font-size: 1.6em;
+  }
+
+  .emp-button {
+    font-size: 0.95em;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .emp-overall-container {
+    margin-top: 80px;
+    margin-left: 0;
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .emp-title {
+    font-size: 1.5em;
+  }
+
+  .emp-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .emp-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  .emp-card {
+    padding: 20px 15px;
+  }
+
+  .emp-card h2 {
+    font-size: 1.4em;
+  }
+
+  .emp-working-days p,
+  .emp-holidays p {
+    font-size: 1em;
+  }
+
+  .emp-card ul {
+    padding-left: 25px;
+  }
+}

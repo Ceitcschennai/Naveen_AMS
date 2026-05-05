@@ -1,0 +1,228 @@
+/* ==========================
+   Base Styles (Mobile First)
+   ========================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6d47c8;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 12px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.welcome-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* ==========================
+   Header Icons
+   ========================== */
+
+/* ==========================
+   Header Icons
+   ========================== */
+
+/* Hide Settings and Profile icons */
+.settings-icon,
+.user-icon {
+  display: none;
+}
+
+/* Only show Logout icon */
+.logout-icon {
+  font-size: 22px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.logout-icon:hover {
+  color: #ffbaba;
+}
+
+/* Only logout has hover effect */
+
+.logout-icon:hover {
+  color: #ffbaba;
+}
+
+
+/* ==========================
+   Overlay
+   ========================== */
+
+.header-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1100;
+}
+
+
+/* ==========================
+   Modal Cards
+   ========================== */
+
+.modal-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #333;
+  padding: 25px 20px;
+  width: 90%;
+  max-width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-dropdown p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.email-dropdown .current-email {
+  color: #0078ff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.email-dropdown input,
+.password-card input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.password-card input::-ms-reveal,
+.password-card input::-ms-clear {
+  display: none !important;
+}
+
+.password-card input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+}
+
+.password-card input::-webkit-password-toggle-button {
+  display: none !important;
+}
+
+
+/* Buttons */
+
+.login-btn,
+.change-btn {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #3e8e41;
+}
+
+.change-btn {
+  background-color: #0078ff;
+}
+
+.change-btn:hover {
+  background-color: #005bb5;
+}
+
+.password-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/* ==========================
+   Tablets (min-width: 600px)
+   ========================== */
+
+@media screen and (min-width: 600px) {
+
+  .header {
+    padding: 14px 30px;
+  }
+
+  .logout-icon,
+  .settings-icon,
+  .user-icon {
+    font-size: 24px;
+  }
+
+}
+
+
+/* ==========================
+   Desktops (min-width: 1025px)
+   ========================== */
+
+@media screen and (min-width: 1025px) {
+
+  .header {
+    left: 250px;
+    width: calc(100% - 250px);
+    padding: 16px 30px;
+  }
+
+  .welcome-text {
+    font-size: 22px;
+  }
+
+  .logout-icon,
+  .settings-icon,
+  .user-icon {
+    font-size: 26px;
+  }
+
+  .icon-section {
+    gap: 14px;
+  }
+
+}

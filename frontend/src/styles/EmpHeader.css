@@ -1,0 +1,218 @@
+.emp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6d47c8;
+  padding: 15px 40px; /* more spacing left and right */
+  color: #ffffff;
+  font-size: 20px;
+  width: calc(100% - 250px); /* correct width based on sidebar */
+  position: fixed;
+  top: 0;
+  left: 250px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.emp-welcome-text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Right section */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Icons container */
+.emp-icon-section {
+  display: flex;
+  align-items: center;
+  gap: 18px; /* space between icons */
+  padding-right: 10px; /* space from edge */
+}
+
+/* Logout */
+.logout-icon-e {
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.logout-icon-e:hover {
+  color: #ffbaba;
+}
+
+/* Settings */
+.settings-icon-e {
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.settings-icon-e:hover {
+  color: #dddddd;
+}
+
+/* Profile */
+.user-icon-e {
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.user-icon-e:hover {
+  color: #dddddd;
+}
+
+/* Overlay */
+.employeheader-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1100;
+}
+
+/* Modal cards */
+.modal-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #333;
+  padding: 30px 25px;
+  width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-dropdown p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.email-dropdown .current-email {
+  color: #0078ff;
+  font-weight: bold;
+  word-break: break-word;
+  margin-bottom: 10px;
+}
+
+.email-dropdown input,
+.password-card input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.password-card input::-ms-reveal,
+.password-card input::-ms-clear {
+  display: none !important;
+}
+
+.password-card input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+}
+
+.password-card input::-webkit-password-toggle-button {
+  display: none !important;
+}
+
+/* Buttons */
+.login-btn,
+.change-btn {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #3e8e41;
+}
+
+.change-btn {
+  background-color: #0078ff;
+}
+
+.change-btn:hover {
+  background-color: #005bb5;
+}
+
+.password-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ======================
+   Mobile
+====================== */
+
+@media (max-width: 600px) {
+
+  .emp-header {
+    left: 0;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .emp-welcome-text {
+    font-size: 16px;
+  }
+
+  .emp-icon-section {
+    gap: 12px;
+  }
+
+  .logout-icon-e,
+  .settings-icon-e,
+  .user-icon-e {
+    font-size: 22px;
+  }
+
+}
+
+/* ======================
+   Tablet
+====================== */
+
+@media (max-width: 1024px) {
+
+  .emp-header {
+    left: 0;
+    width: 100%;
+    padding: 14px 25px;
+  }
+
+  .emp-welcome-text {
+    font-size: 18px;
+  }
+
+  .emp-icon-section {
+    gap: 14px;
+  }
+
+}

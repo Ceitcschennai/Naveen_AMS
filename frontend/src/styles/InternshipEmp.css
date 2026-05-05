@@ -1,0 +1,322 @@
+/* === Main Container Layout === */
+.internship-employees-container {
+  margin-left: 300px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* === Header === */
+.internship-employees-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+/* === Add Employee Section === */
+.add-employee-container {
+  background: #f7fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === Search Bar === */
+.internship-search-bar {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.internship-search-bar input {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.internship-search-bar input:focus {
+  border-color: #3182ce;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.3);
+}
+
+/* === Employees Grid === */
+.internship-employees-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* === Employee Card === */
+.internship-employee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* === Employee Image === */
+.internship-employee-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3182ce;
+  margin-bottom: 1rem;
+}
+
+/* === Employee Details === */
+.internship-employee-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 5px;
+}
+
+.internship-employee-details h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin: 0;
+}
+
+.internship-employee-details p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 0;
+  text-align: left;
+}
+
+/* === Modal Overlay === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* === Modal Box === */
+.modal {
+  background: #ffffff;
+  width: 700px;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* === Form Container with Scroll === */
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding-right: 5px;
+  max-height: calc(90vh - 100px);
+}
+
+/* === Form Grid Layout === */
+.modal .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.modal .form-grid .full-width {
+  grid-column: 1 / -1;
+}
+
+/* === Modal Buttons Fixed at Bottom === */
+.modal .modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.modal p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 6px 0;
+  word-break: break-word;
+}
+
+.modal input,
+.modal select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* === Modal Buttons === */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.modal-buttons button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.modal-buttons button:nth-child(1) {
+  background-color: #3182ce;
+}
+
+.modal-buttons button:nth-child(1):hover {
+  background-color: #2b6cb0;
+}
+
+.modal-buttons button:nth-child(2) {
+  background-color: #e53e3e;
+}
+
+.modal-buttons button:nth-child(2):hover {
+  background-color: #c53030;
+}
+
+/* === Tablet View === */
+@media (max-width: 1024px) {
+  .internship-employees-container {
+    margin-left: 0;
+    margin-top: 80px;
+    padding: 1.5rem;
+  }
+
+  .internship-employee-card {
+    width: 45%;
+  }
+
+  .add-employee-container {
+    padding: 1.5rem;
+  }
+}
+
+/* === Mobile View === */
+@media (max-width: 768px) {
+  .internship-employees-container {
+    margin-left: 0;
+    padding: 1rem;
+    margin-top: 70px;
+    width: 100%;
+  }
+
+  .internship-employee-card {
+    width: 100%;
+    margin-right: 25px;
+  }
+
+  .internship-search-bar input {
+    max-width: 60%;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal form {
+    max-height: calc(90vh - 80px);
+  }
+
+  .modal .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal input {
+    width: 100%;
+  }
+}
+
+/* === Extra Small Devices === */
+@media (max-width: 480px) {
+  .internship-employees-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .internship-employee-details h3 {
+    font-size: 1rem;
+  }
+
+  .internship-employee-details p {
+    font-size: 0.85rem;
+  }
+
+  .internship-employee-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .modal h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal input {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,190 @@
+.emp-holidays-calendar-wrapper {
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  animation: slideIn 0.4s ease-in-out;
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-right: auto;
+  width: 1000px;
+}
+
+.emp-holidays-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff59d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.emp-holidays-calendar-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.emp-holidays-calendar-header button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.emp-holidays-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.emp-holidays-day-header {
+  background: #1565c0;
+  color: #fff;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.emp-holidays-day {
+  background-color: #e3f2fd;
+  border-radius: 6px;
+  padding: 4px;
+  position: relative;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 60px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.emp-holidays-day:hover {
+  transform: scale(1.05);
+}
+
+.emp-holidays-day-number {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.emp-holidays-holiday-text {
+  margin-top: auto;
+  font-size: 0.7rem;
+  color: #000;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 3px;
+}
+
+.emp-holidays-gov {
+  background-color: #1565c0;
+  color: white;
+}
+
+.emp-holidays-restricted {
+  background-color: #81c784;
+  color: white;
+}
+
+.emp-holidays-empty {
+  background: transparent;
+  pointer-events: none;
+  border: none;
+}
+
+@keyframes emp-holidays-slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Tablet View (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .emp-holidays-calendar-wrapper {
+    width: 700px; /* Fixed width to avoid shifting */
+    margin: 50px auto;
+    padding: 15px;
+    overflow-x: hidden; /* Prevent scroll */
+  }
+
+  .emp-holidays-calendar-header h2 {
+    font-size: 1rem;
+  }
+
+  .emp-holidays-calendar-header button {
+    font-size: 0.8rem;
+  }
+
+  .emp-holidays-day-header {
+    font-size: 0.8rem;
+    padding: 6px 0;
+  }
+
+  .emp-holidays-day {
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile View (768px and below) */
+@media screen and (max-width: 768px) {
+  .emp-holidays-calendar-wrapper {
+    width: 320px; /* Same for all months */
+    margin: 30px auto;
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  .emp-holidays-calendar-header {
+    gap: 10px;
+    text-align: center;
+  }
+
+  .emp-holidays-calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+
+  .emp-holidays-day-header {
+   font-size: 0.75rem;
+    padding: 6px 0;
+  }
+ 
+  .emp-holidays-day {
+        font-size: 0.65rem;
+    padding: 4px;
+    min-height: 60px;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .emp-holidays-day-number {
+    font-size: 0.65rem;
+  }
+
+  .emp-holidays-holiday-text {
+    font-size: 0.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

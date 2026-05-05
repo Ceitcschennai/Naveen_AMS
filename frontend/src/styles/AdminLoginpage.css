@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.add-admin-top-right-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.add-admin-login-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.add-admin-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-admin-image-section img {
+  height: 300px;
+  width: 375px;
+  object-fit: cover;
+}
+
+.add-admin-form-section {
+  flex: 1.5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6d47c8;
+  text-align: center;
+}
+
+.add-admin-login-wrapper,
+.add-admin-forgot-password-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.add-admin-login-wrapper h2,
+.add-admin-forgot-password-wrapper h2 {
+  color: #ffffff;
+  font-family: Cambria, Georgia, serif;
+  font-size: 2rem;
+}
+
+.add-admin-login-wrapper p,
+.add-admin-forgot-password-wrapper p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.add-admin-login-form,
+.add-admin-forgot-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.add-admin-input-field {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.7);
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+.add-admin-input-field::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.add-admin-input-field:focus {
+  border-bottom: 2px solid white;
+}
+
+.add-admin-input-field::-ms-reveal,
+.add-admin-input-field::-ms-clear {
+  display: none !important;
+}
+
+.add-admin-input-field::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+}
+
+.add-admin-input-field::-webkit-password-toggle-button {
+  display: none !important;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 40px;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-admin-login-button {
+  padding: 10px;
+  font-size: 1rem;
+  color: #6d47c8;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.add-admin-login-button:hover {
+  background-color: #e0e0e0;
+}
+
+.add-admin-signup-button {
+  width: 100%;
+  max-width: 300px;
+}
+
+.add-admin-forgot-password,
+.add-admin-back-to-login {
+  background: none;
+  color: white;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.add-admin-error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.add-admin-role-selection {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.add-admin-role-selection label {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.add-admin-role-selection input {
+  margin-right: 5px;
+}
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .add-admin-login-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .add-admin-login-wrapper {
+    margin-right: 40px;
+  }
+
+  .add-admin-image-section {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .add-admin-image-section img {
+    width: 52%;
+    height: auto;
+  }
+
+  .add-admin-form-section {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  
+  .add-admin-input-field {
+    width: 100%;
+
+  }
+
+  .add-admin-forgot-password {
+    margin-left: 20px;
+  }
+
+
+  .add-admin-login-button {
+    width: 110%;
+  }
+
+  .add-admin-forgot-password-form {
+    margin-right: 50px;
+  }
+
+  .add-admin-forgot-password-wrapper {
+    margin-right: 5px;
+  }
+
+  .add-admin-back-to-login {
+    margin-right: 30px;
+  }
+
+  
+}
+
+/* Mobile Devices (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .add-admin-login-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  
+
+  .add-admin-form-section {
+    padding: 25px 15px;
+  }
+
+  .add-admin-login-wrapper h2,
+  .add-admin-forgot-password-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  .add-admin-login-wrapper p,
+  .add-admin-forgot-password-wrapper p {
+    font-size: 1.1rem;
+  }
+
+  .add-admin-input-field {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .add-admin-login-button {
+    width: 110%;
+    font-size: 1rem;
+  }
+
+  .add-admin-role-selection label {
+    font-size: 14px;
+  }
+}
+
+

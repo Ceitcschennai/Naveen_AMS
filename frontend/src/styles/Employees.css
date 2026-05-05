@@ -1,0 +1,172 @@
+/* === Base Layout Styling === */
+
+
+/* === Main Container === */
+.container-emp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 250px;
+  align-items: center;
+}
+
+/* Optional left-margin container for layout structure */
+.Emp-container {
+  margin-left: 300px;
+}
+
+/* === Employee Type Boxes === */
+.box {
+  background: linear-gradient(135deg, #6d47c8, #8f5de2);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 220px;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* === Bottom Right Section for Employee Actions === */
+.bottom-right-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.bottom-right-box {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #34a853, #2d8659);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bottom-right-box:hover {
+  transform: scale(1.1);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-right-box svg {
+  margin-right: 10px;
+}
+
+/* === Responsive Styles === */
+
+/* Tablet Devices */
+@media screen and (max-width: 1024px) {
+  .box,
+  .bottom-right-box {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .Emp-container {
+      margin-right: 230px;
+  }
+
+
+}
+
+/* Mobile + Tablets */
+@media screen and (max-width: 768px) {
+  .box,
+  .bottom-right-box {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+    .Emp-container {
+    margin-right: 100px;
+  }
+
+  .container-emp {
+    padding-top: 100px;
+  }
+}
+
+/* Small Mobile */
+/* === Fixed Small Mobile View (No Shake, No Scroll) === */
+@media screen and (max-width: 576px) {
+  html, body {
+   
+  
+    overflow-x: hidden; /* ✅ Stops shaking/side-scroll */
+   
+  }
+
+  .container-emp,
+  .Emp-container {
+    padding: 80px 16px 20px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .box,
+  .bottom-right-box {
+    width: 80%;
+    max-width: 280px;
+    font-size: 15px;
+    padding: 14px;
+    text-align: center;
+    
+  }
+
+  .bottom-right-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+ 
+    box-sizing: border-box;
+   padding: 60px;
+   
+  }
+
+  /* Optional sidebar adjustments if present */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 91vh;
+    overflow-y: auto;
+    z-index: 999;
+    background-color: #6d47c8;
+  }
+
+  .main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  /* If collapsible sidebar is used */
+  .sidebar.collapsed {
+    width: 0;
+  }
+
+  .main-content.full {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+

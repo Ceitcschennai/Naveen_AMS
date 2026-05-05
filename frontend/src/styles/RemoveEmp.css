@@ -1,0 +1,123 @@
+/* ---------- Remove Container ---------- */
+.remove-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  margin: 200px auto 0 auto; /* Center on desktop */
+  transition: all 0.3s ease;
+}
+
+/* ---------- Remove Form ---------- */
+.remove-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.remove-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: black;
+  text-align: center;
+}
+
+/* ---------- Input Group ---------- */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* ---------- Remove Button ---------- */
+.remove-btn {
+  padding: 12px 15px;
+  background-color: #6d47c8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: darkblue;
+}
+
+/* ---------- Error Text ---------- */
+.error-text {
+  color: #e63946;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ---------- Tablet View ---------- */
+@media (max-width: 1024px) {
+  .remove-container {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+  }
+}
+
+/* ---------- Mobile View ---------- */
+@media (max-width: 768px) {
+  .remove-container {
+    margin-top: 100px;
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .remove-form h2 {
+    font-size: 20px;
+  }
+
+  .form-group input {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .remove-btn {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}
+
+/* ---------- Extra Small Devices ---------- */
+@media (max-width: 480px) {
+  .remove-container {
+    margin-top: 280px;
+    padding: 20px;
+  }
+
+  .remove-form h2 {
+    font-size: 22px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    
+    
+  }
+
+  .remove-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,123 @@
+/* ====== BASE STYLES ====== */
+.overview-report-wrapper {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin-left: 300px;
+}
+
+.overview-report-title {
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.overview-filter-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.overview-filter-section input[type="month"],
+.overview-filter-section select {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.overview-filter-section button {
+  width: 70%;
+  max-width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #6c42d6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.overview-filter-section button:hover {
+  background-color: #5633b3;
+}
+
+/* Table Styles */
+.overview-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.overview-report-table th,
+.overview-report-table td {
+  padding: 10px 12px;
+  font-size: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.overview-report-table th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+}
+
+.overview-report-table td {
+  text-align: center;
+
+}
+
+/* ===== TABLET VIEW (<=1024px) ===== */
+@media (max-width: 1024px) {
+  .overview-report-wrapper {
+    padding: 30px 20px;
+    margin: 80px 20px;
+  }
+
+  .overview-report-title {
+    font-size: 26px;
+  }
+
+  .overview-filter-section {
+    gap: 14px;
+  }
+}
+
+/* ===== MOBILE VIEW (<=600px) ===== */
+@media (max-width: 600px) {
+  .overview-report-wrapper {
+    padding: 20px 16px;
+    margin-top: 60px;
+  }
+
+  .overview-report-title {
+    font-size: 22px;
+  }
+
+  .overview-filter-section input[type="month"],
+  .overview-filter-section select,
+  .overview-filter-section button {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .overview-filter-section {
+    flex-direction: column;
+  }
+
+  .overview-report-table th,
+  .overview-report-table td {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}

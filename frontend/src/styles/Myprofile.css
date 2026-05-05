@@ -1,0 +1,136 @@
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-left: 300px;
+  margin-top: 150px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 750px;
+  width: 100%;
+  flex-wrap: wrap;
+  border-right: 2px solid blue;
+}
+
+.profile-image {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.details {
+  flex: 2;
+  padding: 1.5rem;
+}
+
+.details h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.details p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.details strong {
+  color: #111;
+}
+
+
+
+
+
+/* ============================= */
+/* 📱 Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+  .profile-card-container {
+    margin-left: 100px;
+    margin-top: 120px;
+    padding: 1.5rem;
+    margin-right: 100px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    max-width: 90%;
+    border-right: none;
+    border-bottom: 2px solid blue;
+  }
+
+  .profile-image {
+    min-width: 100%;
+    height: auto;
+  }
+
+  .details {
+    padding: 1rem;
+  }
+
+  .details h2 {
+    font-size: 1.3rem;
+  }
+
+  .details p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================= */
+/* 📱 Mobile View (768px and below) */
+@media (max-width: 768px) {
+  .profile-card-container {
+    margin-left: 0;
+    margin-top: 100px;
+    padding: 1rem;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-right: none;
+    border-bottom: 2px solid blue;
+  }
+
+  .profile-image {
+    min-width: 100%;
+    height: 200px;
+  }
+
+  .profile-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .details {
+    padding: 1rem;
+  }
+
+  .details h2 {
+    font-size: 1.2rem;
+  }
+
+  .details p {
+    font-size: 0.9rem;
+  }
+}

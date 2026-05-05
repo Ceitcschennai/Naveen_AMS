@@ -1,0 +1,220 @@
+/* ============ Main Section Container ============ */
+.attendance-section-container {
+  margin-left: 260px;
+  max-width: 1200px;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  transition: all 0.3s ease;
+}
+
+/* ============ Title ============ */
+.attendance-report-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #333;
+  text-align: center;
+}
+
+/* ============ QR Scanner Section ============ */
+.qr-scanner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.qr-scanner-wrapper p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #6c63ff;
+}
+
+/* ============ Filter Form Layout ============ */
+.search-form {
+  margin-bottom: 30px;
+}
+
+.attendance-filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.input-tag input,
+.attendance-filter-section input[type="date"] {
+  padding: 10px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 220px;
+  background-color: #fff;
+  transition: 0.2s ease;
+}
+
+.input-tag ::placeholder {
+  color: black;
+}
+
+.input-tag input:focus,
+.attendance-filter-section input[type="date"]:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+/* ============ Buttons ============ */
+.attendance-filter-section button,
+button.attendance.sumbit {
+  padding: 10px 18px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1px;
+}
+
+.attendance-filter-section button:hover,
+button.attendance.sumbit:hover {
+  background-color: #574fe0;
+}
+
+/* ============ Table Wrapper ============ */
+.attendance-table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.attendance-report-table th,
+.attendance-report-table td {
+  padding: 14px 18px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid #efefef;
+}
+
+.attendance-report-table th {
+  color: white;
+  background-color: #6c63ff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.attendance-report-table tbody tr:hover {
+  background-color: #f1f1fc;
+}
+
+.attendance-report-table td {
+  color: black;
+}
+
+/* ============ Empty State ============ */
+.attendance-report-table td[colspan] {
+  padding: 20px;
+  font-style: italic;
+  color: #777;
+}
+
+/* ============ QR Reader Container ============ */
+.qr-reader__container {
+  width: 100% !important;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+}
+
+/* ============ Responsive: Tablet & Mobile ============ */
+@media (max-width: 1024px) {
+  .attendance-section-container {
+    margin-left: 0;
+    padding: 25px;
+    margin-bottom: 200px;
+  }
+
+  .attendance-report-title {
+    font-size: 24px;
+  }
+
+  .input-tag input,
+  .attendance-filter-section input[type="date"],
+  .attendance-filter-section button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .attendance-report-table {
+    font-size: 14px;
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .attendance-filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .attendance-section-container {
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 150px;
+  }
+
+  .attendance-report-title {
+    font-size: 22px;
+  }
+
+  .attendance-report-table th,
+  .attendance-report-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .qr-scanner-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .qr-scanner-wrapper p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-section-container {
+    padding: 16px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .attendance-report-title {
+    font-size: 20px;
+  }
+
+  .input-tag input,
+  .attendance-filter-section input[type="date"],
+  .attendance-filter-section button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .attendance-report-table {
+    font-size: 12.5px;
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,241 @@
+/* ======= Sidebar Container ======= */
+.sidebar {
+  background-color: #6d47c8;
+  color: white;
+  padding: 1.5rem 1rem;
+  width: 251px;
+  height: 95vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Hide sidebar when closed */
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.sidebar-subtitle {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 4px 0 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar li:hover {
+  background-color: lightskyblue;
+  transform: translateX(2px);
+}
+
+.sidebar li.active {
+  background-color: rebeccapurple;
+  border-radius: 8px;
+}
+
+.sidebar li svg {
+  min-width: 20px;
+  margin-right: 6px;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  font-size: 11px;
+  padding-left: 2.5rem;
+  margin-left: 5px;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item:hover {
+  background-color: rebeccapurple;
+  transform: translateX(2px);
+}
+
+.dropdown-item.active {
+  background-color: darkblue;
+}
+
+/* Footer */
+.sidebar-footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 11px;
+  font-weight: 400;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.day-date-time {
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  padding-right: 10px;
+}
+
+.time {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* ======= Toggle Button ======= */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  background: #6d47c8;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: none;
+}
+
+/* ======= Tablet View (1024px) ======= */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 300px;
+    transform: translateX(-100%);
+    padding: 3.5rem 0.5rem 50px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    top: 5px;
+    left: 10px;
+    padding: 5px 8px;
+  }
+
+  .layout-content {
+    margin-left: 0 !important;
+  }
+
+  .sidebar-footer {
+    margin-bottom: 40px;
+  }
+
+  .topbar h1 {
+    margin-left: 50px;
+  }
+}
+
+/* ======= Small Tablet (768px) ======= */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 240px;
+    transform: translateX(-100%);
+    padding: 3.5rem 0.5rem 50px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar li {
+    font-size: 15px;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .sidebar li svg {
+    font-size: 16px;
+  }
+
+  .dropdown-item {
+    font-size: 11px;
+    padding-left: 2rem;
+  }
+
+  .sidebar-title {
+    font-size: 22px;
+  }
+
+  .sidebar-subtitle {
+    font-size: 12px;
+  }
+
+  .sidebar-toggle-btn {
+    font-size: 20px;
+    top: 5px;
+    left: 10px;
+  }
+
+  .sidebar-footer {
+    font-size: 10px;
+    margin-bottom: 40px;
+  }
+
+  .day-date-time {
+    font-size: 10px;
+    gap: 4px;
+    padding-right: 10px;
+  }
+
+  .time {
+    font-size: 10px;
+  }
+
+  .layout-content {
+    margin-left: 0 !important;
+  }
+}

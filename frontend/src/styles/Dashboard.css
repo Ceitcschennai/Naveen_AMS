@@ -1,0 +1,302 @@
+/* === Layout & Container === */
+.dashboard {
+  margin-top: 100px;
+  padding-left: 220px; /* space for sidebar */
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+/* === Sections Layout === */
+.overview,
+.leave-details,
+.stats-section {
+  display: flex;
+  gap: 20px;
+  
+ 
+}
+
+/* === Cards === */
+.card-1, .card-2, .card-3,
+.card-4, .card-5, .card-6, .card-7 {
+  background-color: #6d47c8;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover,
+.card-4:hover, .card-5:hover, .card-6:hover, .card-7:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  color: black;
+  font-size: 24px;
+}
+
+/* === Timesheet Card === */
+.timesheet-card {
+  background: linear-gradient(to bottom right, white, #f2f2f2);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in;
+  text-align: center;
+}
+
+/* === Circle Progress === */
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.progress-circle svg {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke-width: 8;
+  stroke: #eee;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 0;
+}
+
+.progress-circle circle:nth-child(2) {
+  stroke: #4b7bec;
+  stroke-linecap: round;
+  stroke-dashoffset: 80;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle-text {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* === Button === */
+.punch-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 80%;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.punch-btn:hover {
+  background-color: #218838;
+}
+
+/* === Info Text === */
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* === Statistics Card === */
+.statistics-card {
+  background: linear-gradient(to bottom right, #f9f9f9, #eaeaea);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  animation: slideIn 0.8s ease-out;
+}
+
+.statistics-card h3 {
+  margin-top: 2px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.bar {
+  flex: 1;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 10px;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+.green { background-color: #28a745; }
+.orange { background-color: #fd7e14; }
+.red { background-color: #dc3545; }
+.blue { background-color: #007bff; }
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.notification-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 50%;
+  min-width: 20px;
+  text-align: center;
+
+
+
+
+
+
+}
+
+
+/* === Responsive Fixes === */
+
+@media screen and (max-width: 1024px) {
+  .dashboard {
+    padding: 80px 20px 20px 20px; /* top, right, bottom, left */
+    margin-left: 0; /* Remove sidebar gap */
+  }
+
+  .dashboard-content {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .overview,
+  .leave-details,
+  .stats-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card-1, .card-2, .card-3,
+  .card-4, .card-5, .card-6, .card-7,
+  .timesheet-card, .statistics-card {
+    width: calc(50% - 20px);
+    height: auto;
+    min-width: 240px;
+    max-width: 400px;
+  }
+
+  .punch-btn {
+    font-size: 15px;
+  }
+
+  .circle-text {
+    font-size: 15px;
+  }
+}
+
+
+/* Tablets & Mobiles */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    padding-left: 0;
+    padding-right: 0;
+  
+    margin-right: 30px;
+  }
+
+  .dashboard-content {
+    padding: 10px;
+  }
+
+  .overview,
+  .leave-details,
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-1, .card-2, .card-3,
+  .card-4, .card-5, .card-6, .card-7,
+  .timesheet-card, .statistics-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .progress-circle {
+    margin-bottom: 10px;
+  }
+
+  .punch-btn {
+    margin-bottom: 8px;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 576px) {
+  .dashboard-content {
+    padding: 10px;
+  }
+
+  .punch-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .circle-text {
+    font-size: 14px;
+  }
+}
