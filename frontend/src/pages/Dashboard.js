@@ -224,7 +224,9 @@ const Dashboard = () => {
               <FaFileAlt size={24} className="icon" />
 
               {leaveCount > 0 && (
-                 <span className="notification-badge">{leaveCount}</span>
+                 <span className="notification-badge">
+                   <span style={{ color: "white" }}>🔔 </span> {leaveCount}
+                 </span>
               )}
 
               <div>

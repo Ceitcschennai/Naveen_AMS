@@ -192,18 +192,18 @@
   right: 10px;
   background: red;
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 50%;
-  min-width: 20px;
+  width: 34px;
+  height: 22px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   text-align: center;
-
-
-
-
-
-
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
 
