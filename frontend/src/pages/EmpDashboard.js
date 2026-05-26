@@ -65,23 +65,27 @@ const EmpDashboard = () => {
         let totalHoursTaken = 0;
 
         approvedLeaves.forEach((leave) => {
-          if (leave.duration_type === "Full Day") {
-            totalHoursTaken += WORKING_HOURS_PER_DAY;
-          } else if (leave.duration_type === "Half Day") {
-            totalHoursTaken += HALF_DAY_HOURS;
-          } else if (leave.duration_type === "Hourly") {
-            let hoursTaken = 0;
-            if (leave.hours) {
-              hoursTaken = leave.hours;
-            } else if (leave.from && leave.to) {
+         if (leave.duration_type === "Full Day") {
+           totalHoursTaken += (leave.duration || 1) * WORKING_HOURS_PER_DAY;
+         } 
+            else if (leave.duration_type === "Half Day") {
+               totalHoursTaken += HALF_DAY_HOURS;
+               } 
+             else if (leave.duration_type === "Hourly") {
+               let hoursTaken = 0;
+
+                 if (leave.hours) {
+                   hoursTaken = leave.hours;
+           } else if (leave.from && leave.to) {
               const start = new Date(leave.from);
-              const end = new Date(leave.to);
-              const diffMs = end - start;
-              hoursTaken = diffMs / (1000 * 60 * 60);
-            }
-            totalHoursTaken += hoursTaken;
-          }
-        });
+             const end = new Date(leave.to);
+             const diffMs = end - start;
+             hoursTaken = diffMs / (1000 * 60 * 60);
+           }
+
+          totalHoursTaken += hoursTaken;
+       }
+    });
 
         const totalLeaveHoursAllowed = 20 * WORKING_HOURS_PER_DAY;
         let remainingHours = totalLeaveHoursAllowed - totalHoursTaken;

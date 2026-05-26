@@ -1,0 +1,7 @@
+--- a/backend/controllers/leaveDashboardController.js 
++++ b/backend/controllers/leaveDashboardController.js 
+@@ -11,14 +11,22 @@ exports.getLeaveStats = async (req, res) => { 
+    const userId = req.user?.id; 
+    if (!userId) { 
+      return res.status(401).json({ message: \" Unauthorized "user\ }); 
+    }
